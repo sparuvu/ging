@@ -1,0 +1,82 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'jasmine-jQuery' ]
+2 info using npm@1.4.9
+3 info using node@v0.10.29
+4 verbose node symlink /usr/local/bin/node
+5 warn package.json ging@0.0.0 No description
+6 warn package.json ging@0.0.0 No repository field.
+7 warn package.json ging@0.0.0 No README data
+8 verbose readDependencies using package.json deps
+9 verbose cache add [ 'jasmine-jQuery', null ]
+10 verbose cache add name=undefined spec="jasmine-jQuery" args=["jasmine-jQuery",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: 'jasmine-jQuery',
+11 verbose parsed url   path: 'jasmine-jQuery',
+11 verbose parsed url   href: 'jasmine-jQuery' }
+12 silly lockFile f609d617-jasmine-jQuery jasmine-jQuery
+13 verbose lock jasmine-jQuery /Users/sp027272/.npm/f609d617-jasmine-jQuery.lock
+14 silly lockFile f609d617-jasmine-jQuery jasmine-jQuery
+15 silly lockFile f609d617-jasmine-jQuery jasmine-jQuery
+16 verbose addNamed [ 'jasmine-jQuery', '' ]
+17 verbose addNamed [ null, '*' ]
+18 silly lockFile 4831053d-jasmine-jQuery jasmine-jQuery@
+19 verbose lock jasmine-jQuery@ /Users/sp027272/.npm/4831053d-jasmine-jQuery.lock
+20 silly addNameRange { name: 'jasmine-jQuery', range: '*', hasData: false }
+21 verbose url raw jasmine-jQuery
+22 verbose url resolving [ 'http://registry.npmjs.org/', './jasmine-jQuery' ]
+23 verbose url resolved http://registry.npmjs.org/jasmine-jQuery
+24 info trying registry request attempt 1 at 21:08:11
+25 http GET http://registry.npmjs.org/jasmine-jQuery
+26 http 404 http://registry.npmjs.org/jasmine-jQuery
+27 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+27 verbose headers   'content-type': 'application/json',
+27 verbose headers   'cache-control': 'max-age=0',
+27 verbose headers   'content-length': '52',
+27 verbose headers   'accept-ranges': 'bytes',
+27 verbose headers   date: 'Sat, 15 Nov 2014 03:08:08 GMT',
+27 verbose headers   via: '1.1 varnish',
+27 verbose headers   age: '0',
+27 verbose headers   connection: 'keep-alive',
+27 verbose headers   'x-served-by': 'cache-dfw1820-DFW',
+27 verbose headers   'x-cache': 'MISS',
+27 verbose headers   'x-cache-hits': '0',
+27 verbose headers   'x-timer': 'S1416020888.220034,VS0,VE265' }
+28 silly registry.get cb [ 404,
+28 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+28 silly registry.get     'content-type': 'application/json',
+28 silly registry.get     'cache-control': 'max-age=0',
+28 silly registry.get     'content-length': '52',
+28 silly registry.get     'accept-ranges': 'bytes',
+28 silly registry.get     date: 'Sat, 15 Nov 2014 03:08:08 GMT',
+28 silly registry.get     via: '1.1 varnish',
+28 silly registry.get     age: '0',
+28 silly registry.get     connection: 'keep-alive',
+28 silly registry.get     'x-served-by': 'cache-dfw1820-DFW',
+28 silly registry.get     'x-cache': 'MISS',
+28 silly registry.get     'x-cache-hits': '0',
+28 silly registry.get     'x-timer': 'S1416020888.220034,VS0,VE265' } ]
+29 silly lockFile 4831053d-jasmine-jQuery jasmine-jQuery@
+30 silly lockFile 4831053d-jasmine-jQuery jasmine-jQuery@
+31 error 404 404 Not Found: jasmine-jQuery
+31 error 404
+31 error 404 'jasmine-jQuery' is not in the npm registry.
+31 error 404 You should bug the author to publish it
+31 error 404 It was specified as a dependency of 'ging'
+31 error 404
+31 error 404 Note that you can also install from a
+31 error 404 tarball, folder, or http url, or git url.
+32 error System Darwin 13.2.0
+33 error command "node" "/usr/local/bin/npm" "install" "jasmine-jQuery"
+34 error cwd /Users/sp027272/dev/world_is_not_enough/ging
+35 error node -v v0.10.29
+36 error npm -v 1.4.9
+37 error code E404
+38 verbose exit [ 1, true ]
