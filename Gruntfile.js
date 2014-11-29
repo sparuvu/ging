@@ -351,8 +351,9 @@ module.exports = function (grunt) {
           src: ['generated/*']
         }, {
           expand: true,
+          dot: true,
           cwd: '.',
-          src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
+          src: ['bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*.*'],
           dest: '<%= yeoman.dist %>'
         }]
       },
