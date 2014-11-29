@@ -1,0 +1,48 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <form class="search-box input-group">
+        <input class="form-control" type="text" ng-model="query" ngTrim=true>
+        <span class="input-group-btn">
+            <button class = "btn btn-default glyphicon glyphicon-search" type = "submit" ng-click="search(query)"></button>
+        </span>
+    </form>
+    <div class="search-scope btn-group btn-group-lg" role="group">
+      <button type="button" class="btn btn-default" ng-class="{active: searchType == 'web'}" ng-click="search(query, 'web')" >Web</button>
+      <button type="button" class="btn btn-default" ng-class="{active: searchType == 'image'}" ng-click="search(query, 'image')">Image</button>
+      <button type="button" class="btn btn-default" ng-class="{active: searchType == 'video'}" ng-click="search(query, 'video')">Video</button>
+    </div>
+    <span class="workOffline"> <b>WorkOffline</b> <input type="checkbox" ng-model="workOffline"/> </span>
+  </div>
+</nav>
+<div ng-cloak>
+    <div results-pagination></div>
+    <ul ng-if="searchType == 'web'" id="web-search-results">
+        <li class="result" ng-repeat="result in results">
+            <p class="result-link">
+                <a href={{result.link}}>{{result.title}}</a>
+            </p>
+            <p class="result-link-source">{{result.formattedUrl}}</p>
+            <p class="result-description">{{result.snippet}}</p>
+        </li>
+    </ul>
+
+    <ul ng-if="searchType == 'image'" class="media-search-results">
+        <li class="result" ng-repeat="result in results">
+            <a href="{{result.link}}">
+                <img ng-src="{{result.image.thumbnailLink}}" height="{{result.image.thumbnailHeight}}" width="{{result.image.thumbnailWidth}}"/>
+            </a>
+            <p class="image-title">{{result.title | limitTo: 20 }} ...</p>
+        </li>
+    </ul>
+
+    <ul ng-if="searchType == 'video'" class="media-search-results">
+        <li class="result" ng-repeat="result in results" ng-mouseover="videoPreview($event, result.pagemap.videoobject[0].embedurl)" ng-mouseleave="removePreview()">
+            <a href="{{result.pagemap.videoobject[0].embedurl}}" target="blank">
+                <img ng-src="{{result.pagemap.cse_thumbnail[0].src}}" height="{{result.pagemap.cse_thumbnail[0].height}}" width="{{result.pagemap.cse_thumbnail[0].width}}"/>
+            </a>
+            <p class="video-desc">{{result.pagemap.videoobject[0].description | limitTo: 20}} ...</p>
+        </li>
+    </ul>
+    <div ng-cloak id="player_wrapper" ng-show="showPreview" ng-if="searchType == 'video'" my-iframe style="top:{{top}}px; left: {{left}}px"></div>
+    <div results-pagination></div>
+</div>
